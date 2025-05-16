@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: api-equipat  # puedes cambiar este nombre
+    env: python
+    plan: free  # puedes usar "starter" si necesitas más recursos
+    region: oregon  # o usa el que esté más cerca de tu ubicación (ej: oregon, ohio, frankfurt)
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: ./start.sh
+    autoDeploy: true
